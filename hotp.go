@@ -33,7 +33,7 @@ func getCode(h []byte) uint32 {
 	// offset := h[len(h) - 1] & 0x0f
 	// return ((uint32(h[offset]) & 0x7f) << 24)  |
 	//     ((uint32(h[offset + 1]) & 0xff) << 16) |
-	//	   ((uint32(h[offset + 2]) & 0xff) << 8)  |
-	//	   (uint32(h[offset + 3]) & 0xff)
+	//     ((uint32(h[offset + 2]) & 0xff) << 8)  |
+	//     (uint32(h[offset + 3]) & 0xff)
 	return binary.BigEndian.Uint32(append(h[:0:0], h[h[len(h) - 1] & 0x0f:]...)) & 0x7fffffff
 }
