@@ -1,9 +1,9 @@
 package totp
 
 import (
-	"crypto"
-	_ "crypto/sha256"
-	_ "crypto/sha512"
+	"crypto/sha1"
+	"crypto/sha256"
+	"crypto/sha512"
 	"github.com/nciont/totp/util"
 	"hash"
 	"strconv"
@@ -14,15 +14,15 @@ func NewTOTP(secret []byte, hasher func() hash.Hash, stepper func(uint64) uint64
 }
 
 func NewSHA1TOTP(secret []byte) *TOTP {
-	return NewTOTP(secret, crypto.SHA1.New, util.TimeStepper)
+	return NewTOTP(secret, sha1.New, util.TimeStepper)
 }
 
 func NewSHA256TOTP(secret []byte) *TOTP {
-	return NewTOTP(secret, crypto.SHA256.New, util.TimeStepper)
+	return NewTOTP(secret, sha256.New, util.TimeStepper)
 }
 
 func NewSHA512TOTP(secret []byte) *TOTP {
-	return NewTOTP(secret, crypto.SHA512.New, util.TimeStepper)
+	return NewTOTP(secret, sha512.New, util.TimeStepper)
 }
 
 type TOTP struct {
