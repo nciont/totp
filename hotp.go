@@ -3,9 +3,9 @@ package totp
 import (
 	"crypto/hmac"
 	"encoding/binary"
+	"github.com/nciont/totp/util"
 	"hash"
 	"strconv"
-	"totp/util"
 )
 
 func NewHOTP(hashFn func() hash.Hash, secret []byte) *HOTP {

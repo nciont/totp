@@ -2,9 +2,9 @@ package util_test
 
 import (
 	"bytes"
+	"github.com/nciont/totp/util"
 	"math"
 	"testing"
-	"totp/util"
 )
 
 func TestGetDigits(t *testing.T) {

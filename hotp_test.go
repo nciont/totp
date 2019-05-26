@@ -2,9 +2,9 @@ package totp_test
 
 import (
 	"crypto/sha1"
+	"github.com/nciont/totp"
+	"github.com/nciont/totp/util"
 	"testing"
-	"totp"
-	"totp/util"
 )
 
 func TestHOTP_ComputeString(t *testing.T) {

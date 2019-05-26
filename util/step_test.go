@@ -1,8 +1,8 @@
 package util_test
 
 import (
+	"github.com/nciont/totp/util"
 	"testing"
-	"totp/util"
 )
 
 func TestTimeStepper(t *testing.T) {

@@ -1,3 +1,3 @@
-module totp
+module github.com/nciont/totp
 
 go 1.12

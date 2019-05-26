@@ -4,9 +4,9 @@ import (
 	"crypto"
 	_ "crypto/sha256"
 	_ "crypto/sha512"
+	"github.com/nciont/totp/util"
 	"hash"
 	"strconv"
-	"totp/util"
 )
 
 func NewTOTP(secret []byte, hasher func() hash.Hash, stepper func(uint64) uint64) *TOTP {
