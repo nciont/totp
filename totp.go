@@ -10,7 +10,7 @@ import (
 )
 
 func NewTOTP(secret []byte, hasher func() hash.Hash, stepper func(uint64) uint64) *TOTP {
-	return &TOTP{ NewHOTP(hasher, secret), stepper }
+	return &TOTP{NewHOTP(hasher, secret), stepper}
 }
 
 func NewSHA1TOTP(secret []byte) *TOTP {

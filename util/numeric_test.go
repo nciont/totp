@@ -8,9 +8,9 @@ import (
 )
 
 func TestGetDigits(t *testing.T) {
-	testdata := []*struct{
-		Number uint32
-		Digits int
+	testdata := []*struct {
+		Number   uint32
+		Digits   int
 		Expected int
 	}{
 		{1284755224, 5, 55224},
@@ -29,13 +29,13 @@ func TestGetDigits(t *testing.T) {
 }
 
 func TestIntBytes(t *testing.T) {
-	testdata := []*struct{
-		Value uint64
+	testdata := []*struct {
+		Value    uint64
 		Expected []byte
 	}{
-		{ 0, []byte{0,0,0,0,0,0,0,0} },
-		{ 1, []byte{0,0,0,0,0,0,0,1} },
-		{ math.MaxUint64, []byte{255,255,255,255,255,255,255,255} },
+		{0, []byte{0, 0, 0, 0, 0, 0, 0, 0}},
+		{1, []byte{0, 0, 0, 0, 0, 0, 0, 1}},
+		{math.MaxUint64, []byte{255, 255, 255, 255, 255, 255, 255, 255}},
 	}
 
 	for _, testcase := range testdata {

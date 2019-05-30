@@ -6,14 +6,14 @@ import (
 )
 
 func TestPadStart(t *testing.T) {
-	testcases := []*struct{
-		Value string
-		Length int
+	testcases := []*struct {
+		Value    string
+		Length   int
 		Expected string
 	}{
-		{ "1234", 8, "00001234" },
-		{ "1234", 3, "1234" },
-		{ "", 4, "0000" },
+		{"1234", 8, "00001234"},
+		{"1234", 3, "1234"},
+		{"", 4, "0000"},
 	}
 
 	for _, testcase := range testcases {

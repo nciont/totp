@@ -10,7 +10,7 @@ import (
 func TestHOTP_ComputeString(t *testing.T) {
 	// https://tools.ietf.org/html/rfc4226#page-32
 	testdata := []*struct {
-		Counter int
+		Counter  int
 		Expected string
 	}{
 		{0, "755224"},
